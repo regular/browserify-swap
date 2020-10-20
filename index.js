@@ -60,7 +60,7 @@ module.exports = function browserifySwap(file) {
   function end(cb) {
     const replace = () => {
       swapFile = swapFile.replace(/\\/g, '/')
-      debug('replacing %s with $s', file, swapFile)
+      debug('replacing %s with %s', file, swapFile)
       this.push(requireSwap(swapFile))
       return cb()
     }
